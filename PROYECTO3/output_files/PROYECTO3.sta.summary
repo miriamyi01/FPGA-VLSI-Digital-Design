@@ -1,0 +1,209 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -4.378
+TNS   : -155.789
+
+Type  : Slow 1200mV 85C Model Setup 'divf3:u9|sal'
+Slack : -2.034
+TNS   : -30.446
+
+Type  : Slow 1200mV 85C Model Setup 'echo'
+Slack : -1.791
+TNS   : -1.791
+
+Type  : Slow 1200mV 85C Model Setup 'divfm:u4|clkl'
+Slack : -1.038
+TNS   : -1.143
+
+Type  : Slow 1200mV 85C Model Setup 'sel[2]'
+Slack : -0.735
+TNS   : -0.735
+
+Type  : Slow 1200mV 85C Model Hold 'divfm:u4|clkl'
+Slack : -0.754
+TNS   : -0.833
+
+Type  : Slow 1200mV 85C Model Hold 'sel[2]'
+Slack : 0.338
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'divf3:u9|sal'
+Slack : 0.419
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'echo'
+Slack : 1.573
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'divf3:u9|sal'
+Slack : -0.713
+TNS   : -10.331
+
+Type  : Slow 1200mV 85C Model Removal 'divf3:u9|sal'
+Slack : 1.160
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -105.419
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'echo'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'sel[2]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'divf3:u9|sal'
+Slack : -1.403
+TNS   : -21.045
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'divfm:u4|clkl'
+Slack : -1.403
+TNS   : -3.134
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -4.017
+TNS   : -135.556
+
+Type  : Slow 1200mV 0C Model Setup 'divf3:u9|sal'
+Slack : -1.842
+TNS   : -27.609
+
+Type  : Slow 1200mV 0C Model Setup 'echo'
+Slack : -1.475
+TNS   : -1.475
+
+Type  : Slow 1200mV 0C Model Setup 'divfm:u4|clkl'
+Slack : -1.068
+TNS   : -1.083
+
+Type  : Slow 1200mV 0C Model Setup 'sel[2]'
+Slack : -0.565
+TNS   : -0.565
+
+Type  : Slow 1200mV 0C Model Hold 'divfm:u4|clkl'
+Slack : -0.685
+TNS   : -0.777
+
+Type  : Slow 1200mV 0C Model Hold 'sel[2]'
+Slack : 0.286
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.322
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'divf3:u9|sal'
+Slack : 0.387
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'echo'
+Slack : 1.348
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'divf3:u9|sal'
+Slack : -0.722
+TNS   : -10.427
+
+Type  : Slow 1200mV 0C Model Removal 'divf3:u9|sal'
+Slack : 1.138
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -105.419
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'echo'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'sel[2]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'divf3:u9|sal'
+Slack : -1.403
+TNS   : -21.045
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'divfm:u4|clkl'
+Slack : -1.403
+TNS   : -3.034
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -1.388
+TNS   : -24.822
+
+Type  : Fast 1200mV 0C Model Setup 'divf3:u9|sal'
+Slack : -0.864
+TNS   : -12.817
+
+Type  : Fast 1200mV 0C Model Setup 'echo'
+Slack : -0.467
+TNS   : -0.467
+
+Type  : Fast 1200mV 0C Model Setup 'divfm:u4|clkl'
+Slack : 0.072
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'sel[2]'
+Slack : 0.321
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'divfm:u4|clkl'
+Slack : 0.077
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'sel[2]'
+Slack : 0.117
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.151
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'divf3:u9|sal'
+Slack : 0.166
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'echo'
+Slack : 0.925
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'divf3:u9|sal'
+Slack : 0.459
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'divf3:u9|sal'
+Slack : 0.200
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -78.483
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'echo'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'sel[2]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'divf3:u9|sal'
+Slack : -1.000
+TNS   : -15.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'divfm:u4|clkl'
+Slack : -1.000
+TNS   : -2.000
+
+------------------------------------------------------------

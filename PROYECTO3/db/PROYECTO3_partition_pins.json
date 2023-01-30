@@ -1,0 +1,93 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "salaluLed[0]",
+					"strict" : false
+				},
+				{
+					"name" : "salaluLed[1]",
+					"strict" : false
+				},
+				{
+					"name" : "salaluLed[2]",
+					"strict" : false
+				},
+				{
+					"name" : "trig",
+					"strict" : false
+				},
+				{
+					"name" : "salstatLed[0]",
+					"strict" : false
+				},
+				{
+					"name" : "salstatLed[1]",
+					"strict" : false
+				},
+				{
+					"name" : "salstatLed[2]",
+					"strict" : false
+				},
+				{
+					"name" : "salstatLed[3]",
+					"strict" : false
+				},
+				{
+					"name" : "snlo[0]",
+					"strict" : false
+				},
+				{
+					"name" : "snlo[1]",
+					"strict" : false
+				},
+				{
+					"name" : "snlo[2]",
+					"strict" : false
+				},
+				{
+					"name" : "snlo[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sel[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sel[2]",
+					"strict" : false
+				},
+				{
+					"name" : "B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "echo",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
