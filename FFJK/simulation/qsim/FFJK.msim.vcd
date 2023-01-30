@@ -1,0 +1,300 @@
+$comment
+	File created using the following command:
+		vcd file FFJK.msim.vcd -direction
+$end
+$date
+	Thu Oct 13 17:52:33 2022
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module ffjk_vhd_vec_tst $end
+$var wire 1 ! clk $end
+$var wire 1 " SQ0 $end
+$var wire 1 # SQ1 $end
+$var wire 1 $ SQ2 $end
+
+$scope module i1 $end
+$var wire 1 % gnd $end
+$var wire 1 & vcc $end
+$var wire 1 ' unknown $end
+$var wire 1 ( devoe $end
+$var wire 1 ) devclrn $end
+$var wire 1 * devpor $end
+$var wire 1 + ww_devoe $end
+$var wire 1 , ww_devclrn $end
+$var wire 1 - ww_devpor $end
+$var wire 1 . ww_clk $end
+$var wire 1 / ww_SQ2 $end
+$var wire 1 0 ww_SQ1 $end
+$var wire 1 1 ww_SQ0 $end
+$var wire 1 2 \~QUARTUS_CREATED_GND~I_combout\ $end
+$var wire 1 3 \clk~input_o\ $end
+$var wire 1 4 \clk~inputCLKENA0_outclk\ $end
+$var wire 1 5 \Q0~0_combout\ $end
+$var wire 1 6 \Q0~q\ $end
+$var wire 1 7 \Q1~q\ $end
+$var wire 1 8 \Q0~DUPLICATE_q\ $end
+$var wire 1 9 \Q1~0_combout\ $end
+$var wire 1 : \Q1~DUPLICATE_q\ $end
+$var wire 1 ; \Q2~0_combout\ $end
+$var wire 1 < \Q2~q\ $end
+$var wire 1 = \ALT_INV_Q0~DUPLICATE_q\ $end
+$var wire 1 > \ALT_INV_Q1~DUPLICATE_q\ $end
+$var wire 1 ? \ALT_INV_Q0~q\ $end
+$var wire 1 @ \ALT_INV_Q1~q\ $end
+$var wire 1 A \ALT_INV_Q2~q\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0$
+0%
+1&
+x'
+1(
+1)
+1*
+1+
+1,
+1-
+0.
+0/
+00
+01
+x2
+03
+04
+15
+06
+07
+08
+09
+0:
+0;
+0<
+1=
+1>
+1?
+1@
+1A
+$end
+#500000
+1!
+1.
+13
+14
+16
+18
+0=
+0?
+05
+19
+11
+1"
+#1000000
+0!
+0.
+03
+04
+#1500000
+1!
+1.
+13
+14
+06
+17
+08
+1:
+0>
+1=
+0@
+1?
+15
+10
+01
+1#
+0"
+#2000000
+0!
+0.
+03
+04
+#2500000
+1!
+1.
+13
+14
+16
+18
+0=
+0?
+05
+1;
+09
+11
+1"
+#3000000
+0!
+0.
+03
+04
+#3500000
+1!
+1.
+13
+14
+06
+07
+08
+0:
+1<
+0A
+1>
+1=
+1@
+1?
+15
+1/
+00
+01
+1$
+0#
+0"
+#4000000
+0!
+0.
+03
+04
+#4500000
+1!
+1.
+13
+14
+16
+18
+0=
+0?
+05
+19
+11
+1"
+#5000000
+0!
+0.
+03
+04
+#5500000
+1!
+1.
+13
+14
+06
+17
+08
+1:
+0>
+1=
+0@
+1?
+15
+10
+01
+1#
+0"
+#6000000
+0!
+0.
+03
+04
+#6500000
+1!
+1.
+13
+14
+16
+18
+0=
+0?
+05
+0;
+09
+11
+1"
+#7000000
+0!
+0.
+03
+04
+#7500000
+1!
+1.
+13
+14
+06
+07
+08
+0:
+0<
+1A
+1>
+1=
+1@
+1?
+15
+0/
+00
+01
+0$
+0#
+0"
+#8000000
+0!
+0.
+03
+04
+#8500000
+1!
+1.
+13
+14
+16
+18
+0=
+0?
+05
+19
+11
+1"
+#9000000
+0!
+0.
+03
+04
+#9500000
+1!
+1.
+13
+14
+06
+17
+08
+1:
+0>
+1=
+0@
+1?
+15
+10
+01
+1#
+0"
+#10000000
