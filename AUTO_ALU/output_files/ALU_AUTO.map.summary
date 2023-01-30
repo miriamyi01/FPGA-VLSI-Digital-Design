@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Mon Nov 14 19:20:48 2022
+Quartus Prime Version : 18.1.1 Build 646 04/11/2019 SJ Lite Edition
+Revision Name : ALU_AUTO
+Top-level Entity Name : ALU_AUTO
+Family : MAX 10
+Total logic elements : 101
+    Total combinational functions : 101
+    Dedicated logic registers : 30
+Total registers : 30
+Total pins : 55
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0
