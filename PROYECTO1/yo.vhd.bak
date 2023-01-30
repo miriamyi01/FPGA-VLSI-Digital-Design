@@ -1,0 +1,76 @@
+--Guerrero Prado Issac Alexander
+--No. Cuenta 315569131
+library ieee;
+USE ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+
+entity yo is
+Port (
+		reset, stop: in std_logic;
+		salaluLed: out std_logic_vector(2 downto 0);
+		B, sel: std_logic_vector(2 downto 0);
+		Co: out std_logic;
+		snlo: out std_logic_vector(3 downto 0);
+		clk: in std_logic
+		--cout2: out std_logic;
+		);
+end;
+
+architecture arq of yo is
+signal UA: std_logic_vector(2 downto 0);
+signal UL: std_logic_vector(2 downto 0);
+signal A: std_logic_vector(2 downto 0):="100";
+signal salalu: std_logic_vector(3 downto 0);
+signal cout: std_logic;
+signal salA: std_logic_vector(3 downto 0);
+signal clk1: std_logic;
+signal estado: std_logic_vector(1 downto 0);
+signal velocidad: integer := 250000;
+signal dir: integer;
+signal stat: std_logic_vector(2 downto 0);
+
+begin
+
+
+--u1:entity work.unionSuma(arq) port map (A,B,sel(2),sel(1 downto 0),salalu(3),UA);
+
+--u2: entity work.UL(arq) port map (A,B,UL,sel(1 downto 0));   
+
+--u3: entity work.mul2x1(arq) port map (UA,UL,sel(2), salalu(2 downto 0));
+
+process(sel)
+begin
+
+if (sel(2) = '1') then
+
+	velocidad<=to_integer(signed(salalu));
+
+else
+	velocidad<=velocidad;
+	
+end if;
+end process;
+
+process(sel)
+begin
+	
+if (sel(2) = '0') then
+
+	stat<=salalu(1 downto 0);
+	
+else
+	stat<=stat;
+	
+end if;
+end process;
+
+--u4: entity work.divfm(arqdivfm) port map(velocidad*100000,clk,clk1);
+
+--u6: entity work.entrada(arqen) port map(stat, dir);
+
+--u7: entity work.estados(arqest) port map(clk1, dir, estado);
+
+--u8: entity work.movimiento(arqmov) port map(estado, snlo);
+
+end;

@@ -1,0 +1,316 @@
+|yo
+stop => estados:u7.pause
+salaluLed[0] << mul2x1:u3.salmux[0]
+salaluLed[1] << mul2x1:u3.salmux[1]
+salaluLed[2] << mul2x1:u3.salmux[2]
+B[0] => unionsuma:u1.b[0]
+B[0] => ul:u2.B[0]
+B[1] => unionsuma:u1.b[1]
+B[1] => ul:u2.B[1]
+B[2] => unionsuma:u1.b[2]
+B[2] => ul:u2.B[2]
+sel[0] => unionsuma:u1.sel[0]
+sel[0] => ul:u2.S[0]
+sel[1] => unionsuma:u1.sel[1]
+sel[1] => ul:u2.S[1]
+sel[2] => unionsuma:u1.cin
+sel[2] => stat[0].LATCH_ENABLE
+sel[2] => stat[1].LATCH_ENABLE
+sel[2] => stat[2].LATCH_ENABLE
+sel[2] => mul2x1:u3.sel
+sel[2] => stat[3].LATCH_ENABLE
+sel[2] => velocidad[0].LATCH_ENABLE
+sel[2] => velocidad[1].LATCH_ENABLE
+sel[2] => velocidad[2].LATCH_ENABLE
+sel[2] => velocidad[3].LATCH_ENABLE
+sel[2] => velocidad[4].LATCH_ENABLE
+sel[2] => velocidad[5].LATCH_ENABLE
+sel[2] => velocidad[6].LATCH_ENABLE
+sel[2] => velocidad[7].LATCH_ENABLE
+sel[2] => velocidad[8].LATCH_ENABLE
+sel[2] => velocidad[9].LATCH_ENABLE
+sel[2] => velocidad[10].LATCH_ENABLE
+sel[2] => velocidad[11].LATCH_ENABLE
+sel[2] => velocidad[12].LATCH_ENABLE
+sel[2] => velocidad[13].LATCH_ENABLE
+sel[2] => velocidad[14].LATCH_ENABLE
+sel[2] => velocidad[15].LATCH_ENABLE
+sel[2] => velocidad[16].LATCH_ENABLE
+sel[2] => velocidad[17].LATCH_ENABLE
+sel[2] => velocidad[18].LATCH_ENABLE
+sel[2] => velocidad[19].LATCH_ENABLE
+sel[2] => velocidad[20].LATCH_ENABLE
+sel[2] => velocidad[21].LATCH_ENABLE
+sel[2] => velocidad[22].LATCH_ENABLE
+sel[2] => velocidad[23].LATCH_ENABLE
+sel[2] => velocidad[24].LATCH_ENABLE
+sel[2] => velocidad[25].LATCH_ENABLE
+sel[2] => velocidad[26].LATCH_ENABLE
+sel[2] => velocidad[27].LATCH_ENABLE
+sel[2] => velocidad[28].LATCH_ENABLE
+sel[2] => velocidad[29].LATCH_ENABLE
+sel[2] => velocidad[30].LATCH_ENABLE
+sel[2] => velocidad[31].LATCH_ENABLE
+Co << comb.DB_MAX_OUTPUT_PORT_TYPE
+snlo[0] << movimiento:u8.snlo[0]
+snlo[1] << movimiento:u8.snlo[1]
+snlo[2] << movimiento:u8.snlo[2]
+snlo[3] << movimiento:u8.snlo[3]
+clk => divfm:u4.clk
+clk => divfm:u5.clk
+salstat[0] << stat[0].DB_MAX_OUTPUT_PORT_TYPE
+salstat[1] << stat[1].DB_MAX_OUTPUT_PORT_TYPE
+salstat[2] << stat[2].DB_MAX_OUTPUT_PORT_TYPE
+salstat[3] << stat[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|yo|unionSuma:u1
+a[0] => suma:u2.a[0]
+a[1] => suma:u2.a[1]
+a[2] => suma:u2.a[2]
+b[0] => mul2x1sum:u1.b[0]
+b[1] => mul2x1sum:u1.b[1]
+b[2] => mul2x1sum:u1.b[2]
+cin => suma:u2.cin
+sel[0] => mul2x1sum:u1.sel[0]
+sel[1] => mul2x1sum:u1.sel[1]
+cout <= suma:u2.cout
+salsum[0] <= suma:u2.salsum[0]
+salsum[1] <= suma:u2.salsum[1]
+salsum[2] <= suma:u2.salsum[2]
+
+
+|yo|unionSuma:u1|mul2x1sum:u1
+b[0] => Mux2.IN3
+b[0] => Mux2.IN2
+b[1] => Mux1.IN3
+b[1] => Mux1.IN2
+b[2] => Mux0.IN3
+b[2] => Mux0.IN2
+sel[0] => Mux0.IN5
+sel[0] => Mux1.IN5
+sel[0] => Mux2.IN5
+sel[1] => Mux0.IN4
+sel[1] => Mux1.IN4
+sel[1] => Mux2.IN4
+salmux[0] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+salmux[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+salmux[2] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|yo|unionSuma:u1|suma:u2
+a[0] => Add0.IN3
+a[1] => Add0.IN2
+a[2] => Add0.IN1
+b[0] => Add0.IN6
+b[1] => Add0.IN5
+b[2] => Add0.IN4
+cin => Add1.IN8
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+salsum[0] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+salsum[1] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+salsum[2] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|yo|UL:u2
+A[0] => sand[0].IN0
+A[0] => sor[0].IN0
+A[0] => sxor[0].IN0
+A[0] => Mux2.IN5
+A[1] => sand[1].IN0
+A[1] => sor[1].IN0
+A[1] => sxor[1].IN0
+A[1] => Mux1.IN5
+A[2] => sand[2].IN0
+A[2] => sor[2].IN0
+A[2] => sxor[2].IN0
+A[2] => Mux0.IN5
+B[0] => sand[0].IN1
+B[0] => sor[0].IN1
+B[0] => sxor[0].IN1
+B[1] => sand[1].IN1
+B[1] => sor[1].IN1
+B[1] => sxor[1].IN1
+B[2] => sand[2].IN1
+B[2] => sor[2].IN1
+B[2] => sxor[2].IN1
+F1[0] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+F1[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+F1[2] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+S[0] => Mux0.IN1
+S[0] => Mux1.IN1
+S[0] => Mux2.IN1
+S[1] => Mux0.IN0
+S[1] => Mux1.IN0
+S[1] => Mux2.IN0
+
+
+|yo|mul2x1:u3
+ua[0] => salmux.DATAB
+ua[1] => salmux.DATAB
+ua[2] => salmux.DATAB
+ul[0] => salmux.DATAA
+ul[1] => salmux.DATAA
+ul[2] => salmux.DATAA
+sel => salmux.OUTPUTSELECT
+sel => salmux.OUTPUTSELECT
+sel => salmux.OUTPUTSELECT
+salmux[0] <= salmux.DB_MAX_OUTPUT_PORT_TYPE
+salmux[1] <= salmux.DB_MAX_OUTPUT_PORT_TYPE
+salmux[2] <= salmux.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|yo|divfm:u4
+clk => clkl~reg0.CLK
+clk => conteo[0].CLK
+clk => conteo[1].CLK
+clk => conteo[2].CLK
+clk => conteo[3].CLK
+clk => conteo[4].CLK
+clk => conteo[5].CLK
+clk => conteo[6].CLK
+clk => conteo[7].CLK
+clk => conteo[8].CLK
+clk => conteo[9].CLK
+clk => conteo[10].CLK
+clk => conteo[11].CLK
+clk => conteo[12].CLK
+clk => conteo[13].CLK
+clk => conteo[14].CLK
+clk => conteo[15].CLK
+clk => conteo[16].CLK
+clk => conteo[17].CLK
+clk => conteo[18].CLK
+clkl <= clkl~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|yo|divfm:u5
+clk => clkl~reg0.CLK
+clk => conteo[0].CLK
+clk => conteo[1].CLK
+clk => conteo[2].CLK
+clk => conteo[3].CLK
+clk => conteo[4].CLK
+clk => conteo[5].CLK
+clk => conteo[6].CLK
+clk => conteo[7].CLK
+clk => conteo[8].CLK
+clk => conteo[9].CLK
+clk => conteo[10].CLK
+clk => conteo[11].CLK
+clk => conteo[12].CLK
+clk => conteo[13].CLK
+clk => conteo[14].CLK
+clk => conteo[15].CLK
+clk => conteo[16].CLK
+clk => conteo[17].CLK
+clk => conteo[18].CLK
+clk => conteo[19].CLK
+clkl <= clkl~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|yo|entrada:u6
+stat[0] => Mux0.IN19
+stat[0] => Mux1.IN10
+stat[0] => Mux2.IN15
+stat[1] => Mux0.IN18
+stat[1] => Mux1.IN9
+stat[1] => Mux2.IN14
+stat[2] => Mux0.IN17
+stat[2] => Mux2.IN13
+stat[3] => Mux0.IN16
+stat[3] => Mux1.IN8
+stat[3] => Mux2.IN12
+clk1 => Mux2.IN16
+clk1 => Mux2.IN17
+clk2 => Mux2.IN18
+clk2 => Mux2.IN19
+dir[0] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+dir[1] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+dir[2] <= <GND>
+dir[3] <= <GND>
+dir[4] <= <GND>
+dir[5] <= <GND>
+dir[6] <= <GND>
+dir[7] <= <GND>
+dir[8] <= <GND>
+dir[9] <= <GND>
+dir[10] <= <GND>
+dir[11] <= <GND>
+dir[12] <= <GND>
+dir[13] <= <GND>
+dir[14] <= <GND>
+dir[15] <= <GND>
+dir[16] <= <GND>
+dir[17] <= <GND>
+dir[18] <= <GND>
+dir[19] <= <GND>
+dir[20] <= <GND>
+dir[21] <= <GND>
+dir[22] <= <GND>
+dir[23] <= <GND>
+dir[24] <= <GND>
+dir[25] <= <GND>
+dir[26] <= <GND>
+dir[27] <= <GND>
+dir[28] <= <GND>
+dir[29] <= <GND>
+dir[30] <= <GND>
+dir[31] <= <GND>
+clkl <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|yo|estados:u7
+clk => estado_actual[0].CLK
+clk => estado_actual[1].CLK
+pause => estado_actual[0].ENA
+pause => estado_actual[1].ENA
+dir[0] => Equal0.IN31
+dir[1] => Equal0.IN30
+dir[2] => Equal0.IN29
+dir[3] => Equal0.IN28
+dir[4] => Equal0.IN27
+dir[5] => Equal0.IN26
+dir[6] => Equal0.IN25
+dir[7] => Equal0.IN24
+dir[8] => Equal0.IN23
+dir[9] => Equal0.IN22
+dir[10] => Equal0.IN21
+dir[11] => Equal0.IN20
+dir[12] => Equal0.IN19
+dir[13] => Equal0.IN18
+dir[14] => Equal0.IN17
+dir[15] => Equal0.IN16
+dir[16] => Equal0.IN15
+dir[17] => Equal0.IN14
+dir[18] => Equal0.IN13
+dir[19] => Equal0.IN12
+dir[20] => Equal0.IN11
+dir[21] => Equal0.IN10
+dir[22] => Equal0.IN9
+dir[23] => Equal0.IN8
+dir[24] => Equal0.IN7
+dir[25] => Equal0.IN6
+dir[26] => Equal0.IN5
+dir[27] => Equal0.IN4
+dir[28] => Equal0.IN3
+dir[29] => Equal0.IN2
+dir[30] => Equal0.IN1
+dir[31] => Equal0.IN0
+count[0] <= estado_actual[0].DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= estado_actual[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|yo|movimiento:u8
+estado[0] => Mux0.IN5
+estado[0] => Mux1.IN5
+estado[1] => Mux0.IN4
+estado[1] => Mux1.IN4
+estado[1] => snlo[0].DATAIN
+estado[1] => snlo[2].DATAIN
+snlo[0] <= estado[1].DB_MAX_OUTPUT_PORT_TYPE
+snlo[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+snlo[2] <= estado[1].DB_MAX_OUTPUT_PORT_TYPE
+snlo[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
