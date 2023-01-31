@@ -1,0 +1,176 @@
+|ControlTREN
+clk => divf:u1.clk
+estacion => states:u2.estacion
+alto => states:u2.alto
+emergencia => states:u2.emergencia
+direccion => states:u2.direccion
+direccion => moore:u3.direc
+direccion => moore:u4.direc
+direccion => moore:u5.direc
+direccion => moore:u6.direc
+direccion => moore:u7.direc
+direccion => moore:u8.direc
+alto2 << states:u2.alto2
+alto1 << states:u2.alto1
+izquierda << states:u2.izquierda
+derecha << states:u2.derecha
+hex5 << moore:u3.sal
+hex4 << moore:u4.sal
+hex3 << moore:u5.sal
+hex2 << moore:u6.sal
+hex1 << moore:u7.sal
+hex0 << moore:u8.sal
+
+
+|ControlTREN|DIVF:u1
+clk => clkl~reg0.CLK
+clk => contador[0].CLK
+clk => contador[1].CLK
+clk => contador[2].CLK
+clk => contador[3].CLK
+clk => contador[4].CLK
+clk => contador[5].CLK
+clk => contador[6].CLK
+clk => contador[7].CLK
+clk => contador[8].CLK
+clk => contador[9].CLK
+clk => contador[10].CLK
+clk => contador[11].CLK
+clk => contador[12].CLK
+clk => contador[13].CLK
+clk => contador[14].CLK
+clk => contador[15].CLK
+clk => contador[16].CLK
+clk => contador[17].CLK
+clk => contador[18].CLK
+clk => contador[19].CLK
+clk => contador[20].CLK
+clk => contador[21].CLK
+clk => contador[22].CLK
+clk => contador[23].CLK
+clk => contador[24].CLK
+clkl <= clkl~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ControlTREN|STATES:u2
+clk => estado_actual.CLK
+estacion => estado_siguiente.DATAB
+estacion => alto2.DATAB
+alto => estado_siguiente.OUTPUTSELECT
+alto => alto1.OUTPUTSELECT
+alto => izquierda.IN0
+emergencia => estado_siguiente.DATAA
+emergencia => alto1.DATAA
+emergencia => izquierda.IN1
+direccion => izquierda$latch.DATAIN
+direccion => derecha$latch.DATAIN
+cont <= estado_actual.DB_MAX_OUTPUT_PORT_TYPE
+alto2 <= alto2.DB_MAX_OUTPUT_PORT_TYPE
+alto1 <= alto1.DB_MAX_OUTPUT_PORT_TYPE
+izquierda <= izquierda$latch.DB_MAX_OUTPUT_PORT_TYPE
+derecha <= derecha$latch.DB_MAX_OUTPUT_PORT_TYPE
+conteo2 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ControlTREN|MOORE:u3
+clk => bandera.CLK
+clk => present_state[0].CLK
+clk => present_state[1].CLK
+clk => present_state[2].CLK
+cont => bandera.ENA
+cont => present_state[0].ENA
+cont => present_state[1].ENA
+cont => present_state[2].ENA
+direc => next_state[2].OUTPUTSELECT
+direc => next_state[1].OUTPUTSELECT
+inicio[0] => present_state.DATAA
+inicio[1] => present_state.DATAA
+inicio[2] => present_state.DATAA
+sal <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ControlTREN|MOORE:u4
+clk => bandera.CLK
+clk => present_state[0].CLK
+clk => present_state[1].CLK
+clk => present_state[2].CLK
+cont => bandera.ENA
+cont => present_state[0].ENA
+cont => present_state[1].ENA
+cont => present_state[2].ENA
+direc => next_state[2].OUTPUTSELECT
+direc => next_state[1].OUTPUTSELECT
+inicio[0] => present_state.DATAA
+inicio[1] => present_state.DATAA
+inicio[2] => present_state.DATAA
+sal <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ControlTREN|MOORE:u5
+clk => bandera.CLK
+clk => present_state[0].CLK
+clk => present_state[1].CLK
+clk => present_state[2].CLK
+cont => bandera.ENA
+cont => present_state[0].ENA
+cont => present_state[1].ENA
+cont => present_state[2].ENA
+direc => next_state[2].OUTPUTSELECT
+direc => next_state[1].OUTPUTSELECT
+inicio[0] => present_state.DATAA
+inicio[1] => present_state.DATAA
+inicio[2] => present_state.DATAA
+sal <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ControlTREN|MOORE:u6
+clk => bandera.CLK
+clk => present_state[0].CLK
+clk => present_state[1].CLK
+clk => present_state[2].CLK
+cont => bandera.ENA
+cont => present_state[0].ENA
+cont => present_state[1].ENA
+cont => present_state[2].ENA
+direc => next_state[2].OUTPUTSELECT
+direc => next_state[1].OUTPUTSELECT
+inicio[0] => present_state.DATAA
+inicio[1] => present_state.DATAA
+inicio[2] => present_state.DATAA
+sal <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ControlTREN|MOORE:u7
+clk => bandera.CLK
+clk => present_state[0].CLK
+clk => present_state[1].CLK
+clk => present_state[2].CLK
+cont => bandera.ENA
+cont => present_state[0].ENA
+cont => present_state[1].ENA
+cont => present_state[2].ENA
+direc => next_state[2].OUTPUTSELECT
+direc => next_state[1].OUTPUTSELECT
+inicio[0] => present_state.DATAA
+inicio[1] => present_state.DATAA
+inicio[2] => present_state.DATAA
+sal <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ControlTREN|MOORE:u8
+clk => bandera.CLK
+clk => present_state[0].CLK
+clk => present_state[1].CLK
+clk => present_state[2].CLK
+cont => bandera.ENA
+cont => present_state[0].ENA
+cont => present_state[1].ENA
+cont => present_state[2].ENA
+direc => next_state[2].OUTPUTSELECT
+direc => next_state[1].OUTPUTSELECT
+inicio[0] => present_state.DATAA
+inicio[1] => present_state.DATAA
+inicio[2] => present_state.DATAA
+sal <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+
+
