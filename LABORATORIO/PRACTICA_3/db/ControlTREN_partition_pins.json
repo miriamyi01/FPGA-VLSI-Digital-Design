@@ -1,0 +1,45 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "alto2",
+					"strict" : false
+				},
+				{
+					"name" : "alto1",
+					"strict" : false
+				},
+				{
+					"name" : "izquierda",
+					"strict" : false
+				},
+				{
+					"name" : "derecha",
+					"strict" : false
+				},
+				{
+					"name" : "estacion",
+					"strict" : false
+				},
+				{
+					"name" : "alto",
+					"strict" : false
+				},
+				{
+					"name" : "emergencia",
+					"strict" : false
+				},
+				{
+					"name" : "direccion",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
