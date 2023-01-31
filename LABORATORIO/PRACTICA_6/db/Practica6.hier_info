@@ -1,0 +1,166 @@
+|motorpasos
+clk => divfm:u1.clk
+clk => divfm:u2.clk
+stat[0] => entrada:u3.stat[0]
+stat[1] => entrada:u3.stat[1]
+stat[2] => entrada:u3.stat[2]
+stat[3] => entrada:u3.stat[3]
+snlo[0] << movimiento:u5.snlo[0]
+snlo[1] << movimiento:u5.snlo[1]
+snlo[2] << movimiento:u5.snlo[2]
+snlo[3] << movimiento:u5.snlo[3]
+
+
+|motorpasos|divfm:u1
+clk => clkl~reg0.CLK
+clk => conteo[0].CLK
+clk => conteo[1].CLK
+clk => conteo[2].CLK
+clk => conteo[3].CLK
+clk => conteo[4].CLK
+clk => conteo[5].CLK
+clk => conteo[6].CLK
+clk => conteo[7].CLK
+clk => conteo[8].CLK
+clk => conteo[9].CLK
+clk => conteo[10].CLK
+clk => conteo[11].CLK
+clk => conteo[12].CLK
+clk => conteo[13].CLK
+clk => conteo[14].CLK
+clk => conteo[15].CLK
+clk => conteo[16].CLK
+clk => conteo[17].CLK
+clk => conteo[18].CLK
+clkl <= clkl~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|motorpasos|divfm:u2
+clk => clkl~reg0.CLK
+clk => conteo[0].CLK
+clk => conteo[1].CLK
+clk => conteo[2].CLK
+clk => conteo[3].CLK
+clk => conteo[4].CLK
+clk => conteo[5].CLK
+clk => conteo[6].CLK
+clk => conteo[7].CLK
+clk => conteo[8].CLK
+clk => conteo[9].CLK
+clk => conteo[10].CLK
+clk => conteo[11].CLK
+clk => conteo[12].CLK
+clk => conteo[13].CLK
+clk => conteo[14].CLK
+clk => conteo[15].CLK
+clk => conteo[16].CLK
+clk => conteo[17].CLK
+clk => conteo[18].CLK
+clk => conteo[19].CLK
+clkl <= clkl~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|motorpasos|entrada:u3
+stat[0] => Mux0.IN19
+stat[0] => Mux1.IN19
+stat[0] => Mux2.IN15
+stat[1] => Mux0.IN18
+stat[1] => Mux1.IN18
+stat[1] => Mux2.IN14
+stat[2] => Mux0.IN17
+stat[2] => Mux1.IN17
+stat[2] => Mux2.IN13
+stat[3] => Mux0.IN16
+stat[3] => Mux1.IN16
+stat[3] => Mux2.IN12
+clk1 => Mux2.IN16
+clk1 => Mux2.IN17
+clk2 => Mux2.IN18
+clk2 => Mux2.IN19
+dir[0] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+dir[1] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+dir[2] <= <GND>
+dir[3] <= <GND>
+dir[4] <= <GND>
+dir[5] <= <GND>
+dir[6] <= <GND>
+dir[7] <= <GND>
+dir[8] <= <GND>
+dir[9] <= <GND>
+dir[10] <= <GND>
+dir[11] <= <GND>
+dir[12] <= <GND>
+dir[13] <= <GND>
+dir[14] <= <GND>
+dir[15] <= <GND>
+dir[16] <= <GND>
+dir[17] <= <GND>
+dir[18] <= <GND>
+dir[19] <= <GND>
+dir[20] <= <GND>
+dir[21] <= <GND>
+dir[22] <= <GND>
+dir[23] <= <GND>
+dir[24] <= <GND>
+dir[25] <= <GND>
+dir[26] <= <GND>
+dir[27] <= <GND>
+dir[28] <= <GND>
+dir[29] <= <GND>
+dir[30] <= <GND>
+dir[31] <= <GND>
+clkl <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|motorpasos|estados:u4
+clk => estado_actual[0].CLK
+clk => estado_actual[1].CLK
+dir[0] => Equal0.IN31
+dir[1] => Equal0.IN30
+dir[2] => Equal0.IN29
+dir[3] => Equal0.IN28
+dir[4] => Equal0.IN27
+dir[5] => Equal0.IN26
+dir[6] => Equal0.IN25
+dir[7] => Equal0.IN24
+dir[8] => Equal0.IN23
+dir[9] => Equal0.IN22
+dir[10] => Equal0.IN21
+dir[11] => Equal0.IN20
+dir[12] => Equal0.IN19
+dir[13] => Equal0.IN18
+dir[14] => Equal0.IN17
+dir[15] => Equal0.IN16
+dir[16] => Equal0.IN15
+dir[17] => Equal0.IN14
+dir[18] => Equal0.IN13
+dir[19] => Equal0.IN12
+dir[20] => Equal0.IN11
+dir[21] => Equal0.IN10
+dir[22] => Equal0.IN9
+dir[23] => Equal0.IN8
+dir[24] => Equal0.IN7
+dir[25] => Equal0.IN6
+dir[26] => Equal0.IN5
+dir[27] => Equal0.IN4
+dir[28] => Equal0.IN3
+dir[29] => Equal0.IN2
+dir[30] => Equal0.IN1
+dir[31] => Equal0.IN0
+a[0] <= estado_actual[0].DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= estado_actual[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|motorpasos|movimiento:u5
+estado[0] => Mux0.IN5
+estado[0] => Mux1.IN5
+estado[1] => Mux0.IN4
+estado[1] => Mux1.IN4
+estado[1] => snlo[0].DATAIN
+estado[1] => snlo[2].DATAIN
+snlo[0] <= estado[1].DB_MAX_OUTPUT_PORT_TYPE
+snlo[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+snlo[2] <= estado[1].DB_MAX_OUTPUT_PORT_TYPE
+snlo[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
